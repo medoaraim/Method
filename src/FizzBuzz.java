@@ -3,8 +3,11 @@ public class FizzBuzz {
     private int en;
 
     public FizzBuzz() {
-        this.en = 20;
-        this.sn = 2;
+        this(2, 20);
+    }
+    public FizzBuzz(int sn, int en) {
+        this.sn = sn;
+        this.en = en;
     }
     public int getSn() {
         return sn;
@@ -47,7 +50,7 @@ class FizzBuzzTester{
     public static void main(String[] args) {
         FizzBuzz fb1 = new FizzBuzz();
         System.out.println(fb1);
-        fb1.checkFizzBuzz(2, 20);
+        fb1.checkFizzBuzz(fb1);
 
 
     }
